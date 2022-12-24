@@ -1,0 +1,136 @@
+@use "../abstracts/mixins" as *;
+
+.main-sections {
+  position: relative;
+}
+.main-sections::before {
+  position: absolute;
+  max-width: 485px;
+  width: 100%;
+  height: 649px;
+  top: 25%;
+  left: -35%;
+  z-index: 3;
+  background-image: url("./images/circles.svg");
+  background-size: 435px 453px;
+  background-position: left calc(50% - 50px) top clamp(-50px,-50px,-80px);
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.banner {
+  position: relative;
+  margin-bottom: 140px;
+  padding-bottom: 100px;
+  background-color: #2d2641;
+  background-image: url("./images/circles.svg");
+  background-size: 377px 352px;
+  background-position: left calc(50% + clamp(280px, 150px,400px)) bottom -30%;
+  background-repeat: no-repeat;
+}
+.banner__wrapper{
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-row-gap: 93px;
+}
+.banner__inner{
+  max-width: 330px;
+  text-align: center;
+}
+
+.banner__title{
+  margin-bottom: 16px;
+}
+
+.banner__text{
+  margin-bottom: 32px;
+}
+
+.banner__img {
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  grid-row-start: 1;
+  z-index: 4;
+  object-fit: cover;
+}
+
+@include mq(medium){
+  .main-sections::before{
+    background-position: left calc(50% - 50px) top calc(50% + 100px);
+  }
+  .banner{
+    background-position: left calc(50% + clamp(280px, 150px,400px)) bottom -20%;
+  }
+  .banner__inner{
+    max-width: 430px;
+  }
+}
+
+
+@include mq(tablet){
+  .main-sections::before{
+    top:calc(50% - 100px);
+    background-position: left calc(50% - 50px) top 0;
+    background-size: 400px;
+  }
+  .banner{
+    background-position: left calc(50% + clamp(450px, 150px,600px)) bottom -15%;
+  }
+  
+}
+
+@include mq(laptop){
+  .main-sections::before{
+    top: 35%;
+    left: calc(50% - 55vw);
+    background-position: left calc(50% - 240px) top 0;
+  }
+  .banner{
+    margin-bottom: 300px;
+    background-size: 550px;
+    background-position: left calc(50% + clamp(500px, 150px,800px)) top -40%;
+  }
+  .banner__wrapper{
+    grid-auto-flow: column;
+    grid-column-gap: 30px;
+  }
+  .banner__img{
+    position: relative;
+    top: 30%;
+    max-width: 400px;
+  }
+  .banner__inner{
+    max-width: 500px;
+  }
+}
+
+@include mq(desktop){
+  .main-sections::before{
+    top: 38%;
+    left: calc(50% - 1100px);
+    max-width: 690px;
+    background-size: 600px;
+    background-position: left calc(50%) top 0;
+  }
+  .banner{
+    background-position: left calc(50% + clamp(600px, 150px,800px)) top -40%;
+  }
+  .banner__img{
+    max-width: 540px;
+  }
+  .banner__inner{
+    max-width: 540px;
+    text-align: left;
+  }
+}
+
+// @include mq(desktop2){
+//   .main-sections::before{
+//     max-width: 890px;
+//     left: calc(50% - 1650px);
+//     background-size: cover;
+//     background-position: left calc(50%) top 0;
+//   }
+// }

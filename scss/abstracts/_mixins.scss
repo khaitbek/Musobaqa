@@ -1,28 +1,44 @@
-@mixin retina() {
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
-    /* retina images */
-    @content;
-  }
+@use "./media_queries" as *;
+
+@mixin mq($key){
+    $size:map-get($breakpoints, $key);
+
+    @media only screen and (min-width:$size){
+        @content;
+    }
 }
 
-@mixin defaultBtn($padding:0, $background:transparent, $color:#fff, $border:2px solid #000){
-  padding: $padding;
-  background-color: $background;
-  color: $color;
-  border: $border;
+@mixin hover($transition:300ms,$bg:null,$color:null){
+    &:hover{
+        transition: background $transition ease-in-out, color $transition ease-in-out;
+        @if($bg){
+            background-color: $bg;
+        }
+        @if($color){
+            color: $color;
+        }
+    }
 }
 
-@mixin defaultHover($transition){
-  transition: $transition;
+@mixin pseudo($loc:before){
+    &::#{$loc}{
+        content: "";
+    }
 }
 
-@mixin defaultButtonHover($background:transparent, $color:#fff, $border:2px solid #000) {
-  background-color: $background;
-  color: $color;
-  border: $border;
+@mixin defaultBtn($padding:13px 29px,$background:transparent, $border:1.5px solid var(--clr-neutral-100),$color:var(--clr-primary-200),$fz:var(--fz-100),$fw:var(--fw-200)){
+    padding: $padding;
+    background-color: $background;
+    color: $color;
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: $border;
+}
+
+@mixin defaultList($ls:none){
+    list-style: $ls;
+    padding-left: 0;
 }

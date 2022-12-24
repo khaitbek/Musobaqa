@@ -1,0 +1,39 @@
+@use "../base/colors" as *;
+@use "../base/typography" as *;
+@use "../base/fonts" as *;
+
+@each $type, $level in $colors{
+    @each $prop, $color in $level{
+        .clr-#{$type}-#{$prop}{
+            color: var(--clr-#{$type}-#{$prop});
+        }
+    }
+}
+
+@each $level,$size in $fontSizes{
+    .fs-#{$level}{
+        font-size: var(--fs-#{$level});
+    }
+}
+
+@each $level, $weight in $fontWeights{
+    .fw-#{$level}{
+        font-weight: #{$weight};
+    }
+}
+
+.ff-main{
+    font-family: "Karla","Arial",sans-serif;
+}
+
+.ff-primary{
+    font-family: "DM Serif Display","Times New Roman",serif;
+}
+
+.mt-0{
+    margin-top: 0;
+}
+
+.bg-primary{
+    background-color: var(--clr-primary-200);
+}
