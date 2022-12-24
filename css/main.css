@@ -177,6 +177,11 @@ a {
   padding: 50px;
 }
 
+.article__title {
+  font-style: 50px;
+  color: darkgreen;
+}
+
 .site-header {
   padding: 30px 0;
 }
@@ -682,4 +687,4 @@ a {
   .site-footer__bottom {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}/*# sourceMappingURL=main.css.map */
+}
