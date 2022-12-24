@@ -163,6 +163,14 @@ a {
   background-color: var(--clr-primary-200);
 }
 
+.heder {
+  color: red;
+}
+
+.hero__title {
+  font-size: 50px;
+}
+
 .title {
   background-color: darkcyan;
   color: black;
@@ -679,4 +687,4 @@ a {
   .site-footer__bottom {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}/*# sourceMappingURL=main.css.map */
+}
