@@ -163,6 +163,20 @@ a {
   background-color: var(--clr-primary-200);
 }
 
+.heder {
+  color: red;
+}
+
+.hero__title {
+  font-size: 50px;
+}
+
+.title {
+  background-color: darkcyan;
+  color: black;
+  padding: 50px;
+}
+
 .site-header {
   padding: 30px 0;
 }
