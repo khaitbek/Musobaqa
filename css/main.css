@@ -163,6 +163,17 @@ a {
   background-color: var(--clr-primary-200);
 }
 
+.title {
+  background-color: darkcyan;
+  color: black;
+  padding: 50px;
+}
+
+.article__title {
+  font-style: 50px;
+  color: darkgreen;
+}
+
 .site-header {
   padding: 30px 0;
 }
