@@ -1299,6 +1299,9 @@ body.dark .social__message {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.message__inatgram:hover {
+  background-color: #fff;
+}
 
 .message__iwrap {
   display: inline-block;
@@ -1306,6 +1309,16 @@ body.dark .social__message {
   background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, #F9ED32, #EE2A7B, #D22A8A, #8B2AB2, #1B2AF0, #002AFF) border-box;
   border: 1.5px solid transparent;
   border-radius: 100px;
+}
+.message__iwrap:hover {
+  background: radial-gradient(230.93% 230.93% at 102.01% 2.03%, #F9ED32 0%, #EE2A7B 36%, #D22A8A 44%, #8B2AB2 60%, #1B2AF0 83%, #002AFF 88%);
+}
+.message__iwrap:hover .message__inatgram {
+  background: radial-gradient(230.93% 230.93% at 102.01% 2.03%, #F9ED32 0%, #EE2A7B 36%, #D22A8A 44%, #8B2AB2 60%, #1B2AF0 83%, #002AFF 88%);
+  background: radial-gradient(230.93% 230.93% at 102.01% 2.03%, #F9ED32 0%, #EE2A7B 36%, #D22A8A 44%, #8B2AB2 60%, #1B2AF0 83%, #002AFF 88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .social__card {
