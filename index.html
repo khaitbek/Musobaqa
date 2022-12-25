@@ -14,9 +14,169 @@
 </head>
 
 <body>
+    <!-- header start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__wrapper">
+                <a class="site-logo" href="#">
+                    <img class="site-logo__img" src="./images/header/logo.svg" width="150" height="40"
+                        aria-hidden="true" alt="Car Rental Logo">
+                </a>
+                <!-- hamburger -->
+                <button class="site-header__btn hamburger-btn" id="hamburgerBtn" aria-controls="#navigation">
+                    <span class="visually-hidden" title="Open menu">Menu</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="22" fill="none">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M1 1h38M1 11h38M1 21h38" />
+                    </svg>
+                </button>
+
+                <!-- navbar -->
+                <nav class="sitenav" id="navigation">
+                    <div class="sitenav__wrapper">
+                        <div class="sitenav__inner">
+                            <div class="sitenav__top">
+                                <a class="site-logo" href="#">
+                                    <img class="site-logo__img" src="./images/header/logo.svg" width="150" height="40"
+                                        aria-hidden="true" alt="Car Rental Logo">
+                                </a>
+                                <button class="sitenav__btn close-nav light-btn" id="closeNav">
+                                    <svg aria-hidden="true" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.72723 1.24517C7.99571 0.976684 7.99571 0.541383 7.72723 0.272897C7.45874 0.00441182 7.02344 0.00441182 6.75495 0.272897L4.00019 3.02766L1.24542 0.272898C0.976937 0.00441244 0.541635 0.00441214 0.27315 0.272898C0.00466451 0.541383 0.0046647 0.976684 0.27315 1.24517L3.02792 3.99994L0.273141 6.75471C0.00465614 7.02319 0.00465586 7.4585 0.273141 7.72698C0.541627 7.99547 0.976928 7.99547 1.24541 7.72698L4.00019 4.97221L6.75496 7.72698C7.02345 7.99547 7.45875 7.99547 7.72723 7.72698C7.99572 7.4585 7.99572 7.0232 7.72723 6.75471L4.97246 3.99994L7.72723 1.24517Z"
+                                            fill="currentColor" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                            <ul class="sitenav__list">
+                                <li class="sitenav__item">
+                                    Categories
+                                </li>
+                                <li class="sitenav__item">
+                                    About Us
+                                    <ul class="sitenav__item-list category-list clr-dark-100">
+                                        <li class="category-list__item">
+                                            <a class="category-list__link" href="#">
+                                                News
+                                            </a>
+                                        </li>
+                                        <li class="category-list__item">
+                                            <a class="category-list__link" href="#">
+                                                Careers
+                                            </a>
+                                        </li>
+                                        <li class="category-list__item">
+                                            <a class="category-list__link" href="#">
+                                                Locations
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="sitenav__item">
+                                    Help center
+                                    <ul class="sitenav__item-list category-list category-list clr-dark-100">
+                                        <li class="category-list__item">
+                                            <a class="category-list__link" href="#">
+                                                FAQ
+                                            </a>
+                                        </li>
+                                        <li class="category-list__item">
+                                            <a class="category-list__link" href="#">
+                                                Contact us
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sitenav__item">
+                                    <a class="sitenav__link fw-100" href="tel:+18554200000">
+                                        +1 855 420 0000
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sitenav__bottom">
+                            <a class="sitenav__bottom-link text-main fs-200 fw-200" href="tel:+18554200000">
+                                +1 855 420 0000
+                            </a>
+                            <!-- buttons -->
+                            <div class="sitenav__buttons">
+                                <button class="sitenav__btn theme-btn light-btn" id="themeToggler">
+                                </button>
+                                <button class="sitenav__btn login-btn btn-success fs-200" id="loginBtn">
+                                    Login
+                                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.3125 14.4167C7.3125 14.037 7.6203 13.7292 8 13.7292H13.5C13.6266 13.7292 13.7292 13.6266 13.7292 13.5L13.7292 2.50004C13.7292 2.37348 13.6266 2.27087 13.5 2.27087L8 2.27087C7.6203 2.27087 7.3125 1.96307 7.3125 1.58337C7.3125 1.20368 7.6203 0.895874 8 0.895874H13.5C14.386 0.895874 15.1042 1.61408 15.1042 2.50004V13.5C15.1042 14.386 14.386 15.1042 13.5 15.1042H8C7.6203 15.1042 7.3125 14.7964 7.3125 14.4167Z"
+                                            fill="currentColor" />
+                                        <path
+                                            d="M0.208332 9.02233C0.208332 9.52859 0.618737 9.93899 1.125 9.93899H5.57632C5.59734 10.2648 5.62365 10.5903 5.65526 10.9155L5.68245 11.1953C5.72666 11.6502 6.2097 11.9226 6.62185 11.7251C8.29744 10.9221 9.81433 9.82318 11.0995 8.48129L11.127 8.45262C11.3719 8.19699 11.3719 7.79385 11.127 7.53821L11.0995 7.50954C9.81433 6.16766 8.29744 5.06878 6.62185 4.26577C6.2097 4.06824 5.72666 4.34067 5.68245 4.79556L5.65526 5.07533C5.62365 5.40049 5.59734 5.72605 5.57632 6.05185L1.125 6.05185C0.618738 6.05185 0.208332 6.46226 0.208332 6.96852V9.02233Z"
+                                            fill="currentColor" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <!-- modal -->
+    <dialog class="login-dialog" id="loginDialog">
+        <form class="login-dialog__form" id="loginForm" action="https://echo.htmlacademy.ru/courses">
+            <button class="sitenav__btn close-dialog light-btn" type="button" id="closeDialog">
+                <svg aria-hidden="true" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.72723 1.24517C7.99571 0.976684 7.99571 0.541383 7.72723 0.272897C7.45874 0.00441182 7.02344 0.00441182 6.75495 0.272897L4.00019 3.02766L1.24542 0.272898C0.976937 0.00441244 0.541635 0.00441214 0.27315 0.272898C0.00466451 0.541383 0.0046647 0.976684 0.27315 1.24517L3.02792 3.99994L0.273141 6.75471C0.00465614 7.02319 0.00465586 7.4585 0.273141 7.72698C0.541627 7.99547 0.976928 7.99547 1.24541 7.72698L4.00019 4.97221L6.75496 7.72698C7.02345 7.99547 7.45875 7.99547 7.72723 7.72698C7.99572 7.4585 7.99572 7.0232 7.72723 6.75471L4.97246 3.99994L7.72723 1.24517Z"
+                        fill="currentColor" />
+                </svg>
+            </button>
+            <h2 class="login-dialog__title clr-main">Login</h2>
+            <p class="login-dialog__text">
+                Use the email and password that you login
+            </p>
+            <input class="login-dialog__input" type="email" name="user_email" id="userEmail" aria-label="enter your email" placeholder="Email" required>
+            <label class="login-dialog__label">
+                <input class="login-dialog__input" type="password" name="user_password" id="userPassword" aria-label="enter your password" placeholder="Password" required>
+                <button role="button" class="login-dialog__span show-password" type="button" id="showPasswordBtn">
+                    <span class="visually-hidden" title="show password">Show password</span>
+                </button>
+                <span class="login-dialog__span clr-dark-100">
+                    Forgot password
+                </span>
+            </label>
+            <button class="login-dialog__btn create-btn clr-main" type="button">
+                I want to create an account
+            </button>
+            <button class="login-dialog__btn login-btn btn-success fs-200" id="loginUserBtn" type="submit">
+                Login
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.3125 14.4167C7.3125 14.037 7.6203 13.7292 8 13.7292H13.5C13.6266 13.7292 13.7292 13.6266 13.7292 13.5L13.7292 2.50004C13.7292 2.37348 13.6266 2.27087 13.5 2.27087L8 2.27087C7.6203 2.27087 7.3125 1.96307 7.3125 1.58337C7.3125 1.20368 7.6203 0.895874 8 0.895874H13.5C14.386 0.895874 15.1042 1.61408 15.1042 2.50004V13.5C15.1042 14.386 14.386 15.1042 13.5 15.1042H8C7.6203 15.1042 7.3125 14.7964 7.3125 14.4167Z"
+                        fill="currentColor" />
+                    <path
+                        d="M0.208332 9.02233C0.208332 9.52859 0.618737 9.93899 1.125 9.93899H5.57632C5.59734 10.2648 5.62365 10.5903 5.65526 10.9155L5.68245 11.1953C5.72666 11.6502 6.2097 11.9226 6.62185 11.7251C8.29744 10.9221 9.81433 9.82318 11.0995 8.48129L11.127 8.45262C11.3719 8.19699 11.3719 7.79385 11.127 7.53821L11.0995 7.50954C9.81433 6.16766 8.29744 5.06878 6.62185 4.26577C6.2097 4.06824 5.72666 4.34067 5.68245 4.79556L5.65526 5.07533C5.62365 5.40049 5.59734 5.72605 5.57632 6.05185L1.125 6.05185C0.618738 6.05185 0.208332 6.46226 0.208332 6.96852V9.02233Z"
+                        fill="currentColor" />
+                </svg>
+
+            </button>
+        </form>
+    </dialog>
+    <!-- modal end -->
     <!-- slick js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
