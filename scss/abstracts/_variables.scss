@@ -35,7 +35,18 @@
     --bg-nav:var(--clr-neutral-100);
     --bg-overlay:linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 
+
+    @each $breakpoint, $device in $breaks{
+        @each $level, $size in $device{
+            @include mq($breakpoint){
+                --fs-#{$level}:#{$size};
+            }
+        }
+    }
+    --ff-main:"Montserrat",sans-serif;
+
 }
+
 
 body.dark{
     --bg-body:#1C1C1C;
