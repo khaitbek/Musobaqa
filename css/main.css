@@ -475,4 +475,12 @@ h1 {
 
 .bg-primary {
   background-color: var(--clr-primary-200);
+}
+
+.choose-car__bottom-item {
+  display: none;
+}
+
+.choose-car__bottom-item--active {
+  display: block;
 }/*# sourceMappingURL=main.css.map */
