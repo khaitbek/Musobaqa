@@ -34,13 +34,6 @@ a{
     text-decoration: none;
 }
 
-.container {
-    width: 100%;
-    max-width: 1150px;
-    margin-inline: auto;
-    padding-inline: 20px;
-}
-
 .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -56,3 +49,10 @@ a{
     flex-grow: 1;
 }
 
+h1{
+    text-align: center;
+}
+
+.title{
+    text-align: center;
+}
