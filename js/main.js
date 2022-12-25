@@ -1,6 +1,7 @@
-var elTabLink = document.querySelectorAll(".features-section__text");
-var elTabItem = document.querySelectorAll(".features-section__item-top");
-var elPanelItem = document.querySelectorAll(".choose-car__bottom-item");
+const elTabLink = document.querySelectorAll(".choose-car__top-link");
+const elTabItem = document.querySelectorAll(".choose-car__top-item");
+const elPanelItem = document.querySelectorAll(".choose-car__bottom-item");
+
 
 elTabLink.forEach(function (link) {
 	link.addEventListener("click", function (evt) {
