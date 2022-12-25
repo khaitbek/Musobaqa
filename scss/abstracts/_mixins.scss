@@ -40,5 +40,6 @@
 
 @mixin defaultList($ls:none){
     list-style: $ls;
+    margin: 0;
     padding-left: 0;
 }
