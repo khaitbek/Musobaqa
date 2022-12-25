@@ -1,5 +1,7 @@
-@use "./mixins" as *;
-@use "./variables" as *;
-@use "../base/fonts" as *;
-@use "./default" as *;
-@use "./utility_classes" as *;
+@use "./mixins";
+@use "./variables";
+@use "../base/fonts";
+@use "../vendors/normalize";
+@use "./default";
+@use "../base/container";
+@use "./utility_classes";

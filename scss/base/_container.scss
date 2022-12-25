@@ -7,10 +7,7 @@ $container-padding:(
 
 .container{
     width: 100%;
-    max-width: 1150px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--container-padding);
-}
-@include mixin-name(){
-    
+    padding: 0 20px;
 }
