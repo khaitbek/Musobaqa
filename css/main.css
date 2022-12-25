@@ -1,9 +1,10 @@
 :root {
+  --clr-success-100:#299764;
   --clr-primary-100:#2c2830;
   --clr-primary-200:#2d2641;
   --clr-light-100:#837d88;
   --clr-light-200:#96a9c6;
-  --clr-neutral-100:#fff;
+  --clr-neutral-100:#F5F5F5;
   --fs-100:13px;
   --fs-200:16px;
   --fs-300:20px;
@@ -403,9 +404,13 @@ h1 {
 
 .container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.clr-success-100 {
+  color: var(--clr-success-100);
 }
 
 .clr-primary-100 {
