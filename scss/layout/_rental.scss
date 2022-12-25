@@ -1,0 +1,255 @@
+@use "../abstracts/mixins" as *;
+
+.rental {
+    padding: 100px 0;
+}
+
+.rental__inner {
+
+    background: var(--bg-body);
+    border: 1.5px solid #E5E7EA;
+    border-radius: 20px;
+    padding: 24px 20px;
+    background-image: url("../../images/rental/ground.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% + 50px) -77px;
+}
+
+body.dark .rental__inner{
+    border-color: #333;
+}
+
+.rental__img {
+    display: none;
+    // position: absolute;
+}
+
+.rental__info {
+    width: 100%;
+    max-width: 466px;
+    margin-bottom: 40px;
+}
+
+.rental__wrap {
+    width: 183px;
+}
+
+.rental__title {
+    margin: 0;
+    margin-bottom: 6px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--text-card-100);
+}
+
+.rental__text {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--text-card-200);
+}
+
+.rental__item {
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    height: 138px;
+    padding: 14px;
+    margin-bottom: 10px;
+}
+
+.rental__item--frist {
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 17px;
+        height: 24px;
+        background-image: url("../../images/rental/glass.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 24px;
+        right: 26px;
+    }
+
+    body.dark &::after{
+        background-image: url("../../images/rental/gless-white.svg");
+    }
+
+    &:hover {
+        background-color: #299764;
+
+        .cleaned__text {
+            color: #fff;
+        }
+    }
+}
+
+.rental__item--two {
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 24px;
+        height: 18px;
+        background-image: url("../../images/rental/heard.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 24px;
+        right: 26px;
+    }
+
+    body.dark &::after{
+        background-image: url("../../images/rental/heard-white.svg");
+
+    }
+
+    &:hover {
+        background-color: #299764;
+
+       
+
+        .cleaned__text {
+            color: #fff;
+        }
+    }
+}
+
+.rental__item--three{
+    position: relative;
+    &::after {
+        content: "";
+        width: 24px;
+        height: 19px;
+        background-image: url("../../images/rental/file.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 24px;
+        right: 26px;
+    }
+        
+    body.dark &::after{
+        background-image: url("../../images/rental/file-white.svg");
+
+    }
+    
+
+    &:hover  &::after{
+    display: none;
+
+        background-color: #299764;
+
+        .cleaned__text {
+            color: #fff;
+        }
+    }
+}
+
+.cleaned__text {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: flex-end;
+    color: var(--text-card-100);
+}
+
+@include mq(mobile) {
+    .rental__wrap {
+        width: 100%;
+    }
+}
+
+@include mq(tablet) {
+
+    .rental__inner {
+        padding: 30px 24px;
+    }
+
+
+
+    .rental__cover {
+        padding: 30px 24px;
+    }
+
+    .rental__info {
+        width: 100%;
+        max-width: 446px;
+    }
+
+    .rental__info {
+        margin-bottom: 35px;
+    }
+
+    .rental__wrap {
+        width: 100%;
+    }
+
+    .rental__title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 10px;
+    }
+
+    .rental__text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .rental__info {
+        width: 100%;
+        max-width: 590px;
+    }
+
+    .rental__list {
+        display: flex;
+
+    }
+
+    .rental__item {
+        width: 100%;
+        max-width: 140px;
+        height: 165px;
+    }
+
+    .rental__item:nth-child(2) {
+        margin: 0 10px;
+    }
+}
+
+@include mq(laptop) {
+    .rental__inner {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        background-image: url("../../images/rental/big-round.svg");
+        background-repeat: no-repeat;
+        background-position: calc(50% + 370px) 27px;
+        background-size: 250px 250px;
+        padding-bottom: 0;
+    }
+
+    .rental__img {
+        display: block;
+    }
+
+}
+
+@include mq(desktop) {
+    .rental__item {
+        width: 100%;
+        max-width: 200px;
+        height: 160px;
+    }
+
+}

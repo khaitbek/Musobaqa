@@ -23,7 +23,6 @@
             }
         }
     }
-
     @each $level, $weight in $fontWeights{
         --fw-#{$level}:#{$weight};
     }
@@ -34,24 +33,22 @@
     --ff-main:"Montserrat",sans-serif;
     --bg-nav:var(--clr-neutral-100);
     --bg-overlay:linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-
-
-    @each $breakpoint, $device in $breaks{
-        @each $level, $size in $device{
-            @include mq($breakpoint){
-                --fs-#{$level}:#{$size};
-            }
-        }
-    }
     --ff-main:"Montserrat",sans-serif;
-
+    --bg-card:var(--clr-neutral-200);
+    --text-card-100:var(--clr-dark-900);
+    --text-card-200:var(--clr-dark-100);
+    --category-btn-border:#e5e7ea;
 }
 
 
 body.dark{
-    --bg-body:#1C1C1C;
-    --clr-main:#000;
+    --bg-body:var(--clr-dark-300);
+    --clr-main:var(--clr-dark-900);
     --main-color:var(--clr-neutral-100);
-    --bg-nav: #1C1C1C;
+    --bg-nav: var(--clr-dark-300);
     --bg-overlay:rgba(0,0,0,0.2);
+    --bg-card:var(--clr-dark-200);
+    --text-card-100:var(--clr-neutral-100);
+    --text-card-200:var(--clr-neutral-100);
+    --category-btn-border:#333,
 }

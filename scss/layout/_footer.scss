@@ -1,0 +1,229 @@
+@use "../abstracts/mixins" as *;
+
+.footer {
+	border-top: 1.5px solid #e5e7ea;
+	padding-top: 40px;
+}
+
+body.dark .footer * {
+	color: #fff;
+}
+
+.footer__top-mobile-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+.footer__top-logo-wrapper {
+	max-width: 199px;
+}
+.footer__top-logo {
+	margin-bottom: 16px;
+}
+.footer__top-logo-img {
+	width: 100px;
+	height: 26px;
+}
+.footer__top-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(86px, 130px));
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	border-bottom: 1.5px solid #e5e7ea;
+	padding-bottom: 32px;
+	gap: 40px 71px;
+}
+.footer__top-desc {
+	font-weight: 400;
+	font-size: 10px;
+	margin: 0;
+	line-height: 16px;
+	color: #555555;
+}
+.footer__top-second-desc {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 22px;
+	margin: 0;
+	color: #000000;
+}
+.footer__top-strong {
+	display: inline-block;
+	font-weight: 500;
+	margin-bottom: 16px;
+	font-size: 16px;
+	line-height: 20px;
+	color: #000000;
+}
+.footer__top-inner-list {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.footer__top-item:not(:last-child) {
+	margin-bottom: 12px;
+}
+.footer__top-link {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--text-card-200);
+	&:hover {
+		text-decoration-line: underline;
+		color: #000000;
+	}
+}
+.footer__bottom {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(187px, 211px));
+	padding-top: 32px;
+	padding-bottom: 20px;
+	gap: 40px 0;
+}
+
+.footer__bottom-desc {
+	display: none;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #000000;
+}
+.footer__bottom-list {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.footer__bottom-item:not(:last-child) {
+	margin-bottom: 12px;
+}
+.footer__bottom-strong {
+	display: inline-block;
+	margin-bottom: 16px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	color: #000000;
+}
+.footer__bottom-link {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	color: #555555;
+	&:hover {
+		text-decoration-line: underline;
+		color: #000000;
+	}
+}
+.footer__bottom-time {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	color: #555555;
+}
+.footer__bottom-social-list {
+	display: flex;
+	align-items: center;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.footer__bottom-social-link{
+	color: #fff;
+}
+.footer__bottom-social-item {
+	&:nth-child(1) .footer__bottom-social-link:hover {
+		background: radial-gradient(
+			230.93% 230.93% at 102.01% 2.03%,
+			#f9ed32 0%,
+			#ee2a7b 36%,
+			#d22a8a 44%,
+			#8b2ab2 60%,
+			#1b2af0 83%,
+			#002aff 88%
+		);
+	}
+	&:nth-child(2) .footer__bottom-social-link:hover {
+		background-color: #55ace3;
+	}
+	&:nth-child(3) .footer__bottom-social-link:hover {
+		background-color: #0b84ee;
+	}
+	&:nth-child(4) .footer__bottom-social-link:hover {
+		background-color: #48c95f;
+	}
+}
+.footer__bottom-social-item:not(:last-child) {
+	margin-right: 15px;
+}
+.footer__bottom-social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	background-color: #000000;
+	border-radius: 500px;
+}
+
+.footer__bottom-social-img {
+	width: 20px;
+	height: 20px;
+}
+
+@include mq(tablet) {
+	.footer__top-mobile-wrapper {
+		margin-bottom: 30px;
+	}
+	.footer__top-logo-wrapper {
+		max-width: 240px;
+	}
+	.footer__top-logo-img {
+		width: 150px;
+		height: 40px;
+	}
+	.footer__top-desc {
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.footer__top-second-desc {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.footer__top-strong {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.footer__top-link {
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
+@include mq(desktop) {
+	.footer__top-second-desc {
+		display: none;
+	}
+	.footer__top {
+		display: flex;
+		align-items: center;
+	}
+	.footer__top-mobile-wrapper {
+		margin-bottom: 0;
+		padding-bottom: 44px;
+		margin-right: 65px;
+	}
+	.footer__top-wrapper {
+		grid-template-columns: repeat(auto-fit, minmax(86px, 15%));
+	}
+	.footer__top-wrapper {
+		padding-bottom: 40px;
+	}
+	.footer__bottom {
+		grid-template-columns: repeat(auto-fit, minmax(191px, 255px));
+		padding: 40px 0;
+	}
+	.footer__bottom-desc {
+		display: block;
+		margin-right: 100px;
+	}
+}

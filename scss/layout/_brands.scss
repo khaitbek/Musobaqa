@@ -1,7 +1,7 @@
 @use "../abstracts/mixins" as *;
 
 .brands {
-	padding-bottom: 100px;
+	padding-block: 100px;
 }
 .container-brand {
 	width: 100%;
@@ -21,7 +21,7 @@
 	margin-bottom: 24px;
 	line-height: 24px;
 	text-align: start;
-	color: #000000;
+	color: var(--text-card-100);
 }
 .brands__list {
 	display: flex;
@@ -42,7 +42,7 @@
 
 @include mq(tablet) {
 	.brands {
-		padding-bottom: 120px;
+		padding-block: 120px;
 	}
 	.container-brand {
 		padding-left: 20px;
@@ -63,7 +63,7 @@
 
 @include mq(desktop) {
 	.brands {
-		padding-bottom: 160px;
+		padding-block: 160px;
 	}
 	.container-brand {
 		padding: 0 20px;
