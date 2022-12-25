@@ -1,0 +1,80 @@
+button{
+    transition: all .2s ease-in-out;
+}
+
+.btn-success{
+    padding: 18px 30px;
+    border-radius: 100px;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-success-100);
+
+    &:hover{
+        background-color: var(--clr-success-900);
+    }
+
+    &:active{
+        color: var(--clr-dark-900);
+        background-color: var(--clr-neutral-200);
+    }
+}
+
+.login-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn svg{
+    margin-left: 8px;
+}
+
+.light-btn{
+    padding: 18px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: var(--clr-dark-100);
+    background-color: var(--clr-neutral-200);
+    &:hover{
+        color: var(--clr-dark-900);
+    }
+    &:active{
+        color: var(--clr-neutral-100);
+        background-color: var(--clr-success-100);
+    }
+
+}
+
+.close-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.theme-btn{
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-image: url("../../images/header/Icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:active{
+        background-image: url("../../images/header/light-moon.svg");
+    }
+}
+
+.create-btn{
+    margin-bottom: 32px;
+}
+
+.show-password{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 22px;
+    height: 22px;
+    background-image:url("../../images/modal/eye.svg") ;
+}

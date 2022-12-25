@@ -1,0 +1,20 @@
+.login-dialog__input {
+    padding: 18px 30px;
+    font-size: var(--fs-200);
+    border: 1.5px solid #E5E7EA;
+    border-radius: 82px;
+}
+
+.login-dialog__input[type="email"]{
+    margin-bottom: 16px;
+}
+
+.login-dialog__input[type="password"],.login-dialog__input[type="text"]{
+    margin-bottom: 8px;
+}
+
+.login-dialog__label{
+    margin-bottom: 26px;
+    text-align: right;
+    font-size: var(--fs-50);
+}
