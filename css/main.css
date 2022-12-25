@@ -1119,4 +1119,228 @@ h1 {
 
 .slick-dot-mansur.active-dot {
   opacity: 1;
+}
+
+.rental {
+  padding: 100px 0;
+}
+
+.rental__inner {
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EA;
+  border-radius: 20px;
+  padding: 24px 20px;
+  background-image: url("../../images/rental/ground.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% + 50px) -77px;
+}
+
+.rental__img {
+  display: none;
+}
+
+.rental__info {
+  width: 100%;
+  max-width: 466px;
+  margin-bottom: 40px;
+}
+
+.rental__wrap {
+  width: 183px;
+}
+
+.rental__title {
+  margin: 0;
+  margin-bottom: 6px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.rental__text {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #555555;
+}
+
+.rental__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: #F5F5F5;
+  border-radius: 16px;
+  height: 138px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.rental__item--frist {
+  position: relative;
+}
+.rental__item--frist::after {
+  content: "";
+  width: 17px;
+  height: 24px;
+  background-image: url("../../images/rental/glass.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 24px;
+  right: 26px;
+}
+.rental__item--frist:hover {
+  background-color: #299764;
+}
+.rental__item--frist:hover::after {
+  background-image: url("../../images/rental/gless-white.svg");
+}
+.rental__item--frist:hover .cleaned__text {
+  color: #fff;
+}
+
+.rental__item--two {
+  position: relative;
+}
+.rental__item--two::after {
+  content: "";
+  width: 24px;
+  height: 18px;
+  background-image: url("../../images/rental/heard.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 24px;
+  right: 26px;
+}
+.rental__item--two:hover {
+  background-color: #299764;
+}
+.rental__item--two:hover::after {
+  background-image: url("../../images/rental/heard-white.svg");
+}
+.rental__item--two:hover .cleaned__text {
+  color: #fff;
+}
+
+.rental__item--three {
+  position: relative;
+}
+.rental__item--three::after {
+  content: "";
+  width: 24px;
+  height: 19px;
+  background-image: url("../../images/rental/file.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 24px;
+  right: 26px;
+}
+.rental__item--three:hover {
+  background-color: #299764;
+}
+.rental__item--three:hover::after {
+  background-image: url("../../images/rental/file-white.svg");
+}
+.rental__item--three:hover .cleaned__text {
+  color: #fff;
+}
+
+.cleaned__text {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #000000;
+}
+
+@media only screen and (min-width: 375px) {
+  .rental__wrap {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .rental__inner {
+    padding: 30px 24px;
+  }
+  .rental__cover {
+    padding: 30px 24px;
+  }
+  .rental__info {
+    width: 100%;
+    max-width: 446px;
+  }
+  .rental__info {
+    margin-bottom: 35px;
+  }
+  .rental__wrap {
+    width: 100%;
+  }
+  .rental__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 10px;
+  }
+  .rental__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .rental__info {
+    width: 100%;
+    max-width: 590px;
+  }
+  .rental__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .rental__item {
+    width: 100%;
+    max-width: 140px;
+    height: 165px;
+  }
+  .rental__item:nth-child(2) {
+    margin: 0 10px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .rental__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    background-image: url("../../images/rental/big-round.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 370px) 27px;
+    background-size: 250px 250px;
+    padding-bottom: 0;
+  }
+  .rental__img {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .rental__item {
+    width: 100%;
+    max-width: 200px;
+    height: 160px;
+  }
 }/*# sourceMappingURL=main.css.map */
