@@ -110,12 +110,9 @@ body.dark .social__message {
   }
 
   &:hover .message__inatgram {
-    background: radial-gradient(230.93% 230.93% at 102.01% 2.03%, #F9ED32 0%, #EE2A7B 36%, #D22A8A 44%, #8B2AB2 60%, #1B2AF0 83%, #002AFF 88%);
-    background: radial-gradient(230.93% 230.93% at 102.01% 2.03%, #F9ED32 0%, #EE2A7B 36%, #D22A8A 44%, #8B2AB2 60%, #1B2AF0 83%, #002AFF 88%);
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: radial-gradient(230.93% 230.93% at 102.01% 2.03%, transparent 0%, transparent 36%, transparent 44%, transparent 60%, transparent 83%, transparent 88%);
+    color: #fff !important;
+    -webkit-text-fill-color: #fff;
   }
 
 
