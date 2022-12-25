@@ -10,10 +10,21 @@
     }
 }
 
-@each $level,$size in $fontSizes{
-    .fs-#{$level}{
-        font-size: var(--fs-#{$level});
+@each $type, $level in $colors{
+    @each $prop, $color in $level{
+        .bg-#{$type}-#{$prop}{
+            background-color: var(--clr-#{$type}-#{$prop});
+        }
     }
+}
+
+@each $screen-size, $font-size in $fontSizes{
+        @each $size, $value in $font-size{
+            .fs-#{$size}{
+                font-size:#{$value};
+            }
+        }
+    
 }
 
 @each $level, $weight in $fontWeights{
@@ -36,4 +47,8 @@
 
 .bg-primary{
     background-color: var(--clr-primary-200);
+}
+
+.text-main{
+    color: var(--main-color);
 }

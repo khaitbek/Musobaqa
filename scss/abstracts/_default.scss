@@ -17,6 +17,12 @@ body {
     margin: 0;
     font-family: var(--ff-main);
     overflow-x: hidden;
+    background-color: var(--bg-body);
+    transition: background-color .3s ease-in-out;
+}
+
+body.overlay{
+    background: var(--bg-overlay);
 }
 
 img {
@@ -27,6 +33,12 @@ img {
 
 ul {
     @include defaultList;
+}
+
+button{
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 a{
