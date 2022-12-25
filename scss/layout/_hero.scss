@@ -1,11 +1,11 @@
 @use "../abstracts/mixins" as *;
-body{
-  background-image: url("../images/hero/malibu-desctob.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+
 .hero{
   padding: 20px 0px 100px 0px;
+}
+
+.hero__carousel{
+  position: relative;
 }
 
 .carousel__list{
@@ -18,21 +18,34 @@ body{
 .carousel__item{
    height: 300px;
    padding: 40px 0px 30px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: salmon;
-  border-radius: 15px;
-  background-image: url("../images/hero/malibu-desctob.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
+   border-radius: 15px;
 }
 
-.carousel__item2{
-  background-image: url("../images/hero/malibu-desctob.jpg");
+.carousel__item--malibu{
+  background-image: url("../../images/hero/gelik-desctob.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__item--gelik{
+  background-image: url("../../images/hero/gelik-desctob.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__item--sprinter{
+  background-image: url("../../images/hero/sprinter-desctob.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__info{
+  width: 100%;
+  max-width: 283px;
+  margin: 0 auto;
 }
 
 .carousel__title{
@@ -43,7 +56,7 @@ font-weight: 600;
 font-size: 24px;
 line-height: 29px;
 text-align: center;
-color: #000;
+color: #fff;
 }
 
 .carousel__text{
@@ -53,7 +66,75 @@ font-weight: 400;
 font-size: 12px;
 line-height: 15px;
 text-align: center;
-color: #000;
+color: #fff;
+}
+
+.slick-next,.slick-prev{
+  display: none !important;
+}
+
+.carousel__form{
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  background-color: #FFFFFF;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+border-radius: 100px;
+}
+
+.carousel__input{
+  width: 80%;
+  border: none;
+  padding: 16px;
+  background-color: transparent;
+  outline: none;
+  &::placeholder{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #555555;
+  }
+}
+
+.carousel__btn{
+  position: relative;
+  width: 52px;
+  height: 52px;
+  background-color:   #299764;
+  border-radius: 100px;;
+  border: none;
+  transition: all 0.2s ease;
+  &::before{
+    content: "";
+    width: 14.5px;
+    height: 14.5px;
+    background-image: url(../../images//hero/search-Icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+}
+&:hover{
+  background-color: #077743;
+}
+&:active{
+  background-color: #F5F5F5;
+  &::before{
+    background-image: url(../../images//hero/search-dark-icon.svg);
+  }
+}
+// &:active ::before{
+//   background-image: url(../../images//hero/search-dark-icon.svg);
+// }
 }
 
 @include mq(tablet){
@@ -68,6 +149,10 @@ color: #000;
     padding: 60px 0px 40px 0px;
   }
 
+  .carousel__info{
+    max-width: 416px;
+  }
+
   .carousel__title{
     margin-bottom: 10px;
   font-size: 36px;
@@ -78,6 +163,30 @@ color: #000;
   font-size: 16px;
 line-height: 20px;
   }
+
+  .slick-next,.slick-prev{
+    display: block !important;
+  }
+
+  .slick-dots
+{
+    position: absolute;
+    bottom: 35px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    padding: 0 40px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start !important;
+}
+
+.carousel__form{
+  max-width: 600px;
+  bottom: -30px;
+}
 
 }
 
